@@ -4,10 +4,10 @@
     --text-color: #333;
     --accent-color: #1877f2;
 }
-
 body.dark-mode {
-    --bg-color: #1e1e2f;
+    --bg-color: #121212;
     --text-color: #e0e0e0;
+    --accent-color: #bb86fc;
 }
 
 body {
@@ -27,15 +27,29 @@ header, section {
 
 header {
     text-align: center;
-    background: #14075c;
+    background: hsl(249, 86%, 19%);
+    padding-top: 7%;
+    padding-bottom: 7%;
+    background: linear-gradient(135deg, #14075c 0%, #070127 100%);
+    border-radius: 10px;
     color: white;
     position: relative;
 }
 
 header img {
-    max-width: 150px;
+    max-width: 220px;
     border-radius: 50%;
     margin-top: 20px;
+    transition: transform 0.3s, color 0.3s, background 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+header img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    color:#0831e6;
+    background: white;
+    box-shadow: #1877f2 0px 0px 10px;
 }
 
 h1 {
@@ -48,29 +62,45 @@ h3 {
     text-align: center;
 }
 nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+  margin: 0 15px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
 }
 
 nav {
-    margin-bottom: 10px;
-    background-color: rgb(21, 21, 21);
-    padding: 10px;
-    border-radius: 5px; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  margin: 0;
+  padding: 10px 0;
+  background-color: rgba(255, 255, 255, 0.85); 
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  text-align: center;
+}
+
+
+nav a:hover {
+    color: #ddd;
+    background: #333;
 }
 
 .toggle-button {
-    position: right;
-    top: 15px;
+    position: absolute;
+    top: 5px;
     right: 20px;
     background: rgb(21, 21, 21);
     color: white;
     border: none;
-    padding: 8px 12px;
+    padding: 8px 8px;
     cursor: pointer;
     border-radius: 5px;
+}
+
+.toggle-button:hover {
+    background: #333;
 }
 
 .scroll-container::-webkit-scrollbar {
@@ -107,6 +137,26 @@ body.dark-mode .contact {
     background-color: #2a2a3c;
     color: #ffffff;
 }
+
+body.dark-mode nav {
+  background-color: rgba(20, 20, 30, 0.9); /* dark transparent background */
+}
+
+body.dark-mode nav a {
+  color: white;
+}
+
+body.dark-mode nav a:hover {
+  background-color: #333;
+  color: var(--accent-color);
+}
+
+body.dark-mode .project:hover {
+  background-color: var(--accent-color);
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 
 .dots {
     text-align: center;
@@ -150,6 +200,11 @@ body.dark-mode .contact {
 .contact-icons a:hover {
   color: var(--accent-color);
 }
+
+section {
+  padding-top: 100px; /* to prevent nav overlap */
+}
+
 
 footer {
     text-align: center;
