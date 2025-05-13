@@ -17,3 +17,12 @@ container.addEventListener('scroll', () => {
         dots[activeIndex].classList.add('active');
     }
 });
+
+function toggleMode() {
+  const body = document.body;
+  body.classList.toggle('dark-mode');
+
+  const icon = document.querySelector('.toggle-button i');
+  icon.classList.toggle('fa-moon');
+  icon.classList.toggle('fa-sun');
+}
