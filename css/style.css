@@ -1,0 +1,134 @@
+
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --accent-color: #1877f2;
+}
+
+body.dark-mode {
+    --bg-color: #1e1e2f;
+    --text-color: #e0e0e0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+header, section {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    background: #800020;
+    color: white;
+    position: relative;
+}
+
+header img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+h1 {
+    margin: 10px 0 5px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav {
+    margin-bottom: 10px;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding-bottom: 20px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.project {
+    min-width: 180px;
+    height: 200px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    border-radius: 10px;
+    padding: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+body.dark-mode .project,
+body.dark-mode .contact {
+    background-color: #2a2a3c;
+    color: #ffffff;
+}
+
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.active {
+    background-color: var(--accent-color);
+}
+
+.contact {
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+footer {
+    text-align: center;
+    font-size: 0.85em;
+    color: #777;
+    padding: 20px;
+}
