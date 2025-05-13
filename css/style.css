@@ -56,13 +56,17 @@ nav a {
 
 nav {
     margin-bottom: 10px;
+    background-color: rgb(21, 21, 21);
+    padding: 10px;
+    border-radius: 5px; 
 }
 
 .toggle-button {
-    position: absolute;
+    position: right;
     top: 15px;
     right: 20px;
-    background: #fff;
+    background: rgb(21, 21, 21);
+    color: white;
     border: none;
     padding: 8px 12px;
     cursor: pointer;
