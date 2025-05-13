@@ -211,4 +211,7 @@ footer {
     font-size: 0.85em;
     color: #777;
     padding: 20px;
+    background-attachment: fixed;
+    background: linear-gradient(135deg, #14075c 0%, #070127 100%);
+    color: white;
 }
