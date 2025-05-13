@@ -83,8 +83,7 @@ nav {
 
 
 nav a:hover {
-    color: #ddd;
-    background: #333;
+    color: #301bbc;
 }
 
 .toggle-button {
@@ -139,7 +138,7 @@ body.dark-mode .contact {
 }
 
 body.dark-mode nav {
-  background-color: rgba(20, 20, 30, 0.9); /* dark transparent background */
+  background-color: rgba(20, 20, 30, 0.9); 
 }
 
 body.dark-mode nav a {
@@ -147,12 +146,11 @@ body.dark-mode nav a {
 }
 
 body.dark-mode nav a:hover {
-  background-color: #333;
   color: var(--accent-color);
 }
 
 body.dark-mode .project:hover {
-  background-color: var(--accent-color);
+  background-color: #301bbc;
   color: white;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -202,7 +200,7 @@ body.dark-mode .project:hover {
 }
 
 section {
-  padding-top: 100px; /* to prevent nav overlap */
+  padding-top: 100px;
 }
 
 
